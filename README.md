@@ -5,6 +5,8 @@ here I assume policyholders are stored in a list called policyholders,
 events are stored in a list called events,
 each element of these two lists is a class object.
 
+All demonstrations of methods and functions are at [gd_test.py](https://github.com/swjcpy/gd_test/blob/master/gd_test.py)
+
 [policyholders.py](https://github.com/swjcpy/gd_test/blob/master/policyholders.py) defines each policyholder,
 everytime a new policy holder is created, it will be stored into policyholders list
 
