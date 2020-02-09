@@ -15,7 +15,7 @@ class event:
 
     @classmethod
     # This method adds an insurance event for a specific user identified by unique identifier
-    def from_parent(cls, id, date_of_incidence, issue_type, billed_amount, covered_amount):
+    def by_id(cls, id, date_of_incidence, issue_type, billed_amount, covered_amount):
         for ph in policyholder.policyholders:
             if id == ph.policyholder_id:
                 print("Ready to insert event")

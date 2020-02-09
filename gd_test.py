@@ -6,7 +6,7 @@ from datetime import date, datetime
 # here I assume policyholders are stored in a list called policyholders
 # events are stored in a list called events
 # each element of these two lists is a class object
-# event is a child of policyholder
+
 print("policyholders: {}".format(policyholder.policyholders))
 
 ph1 = policyholder("Male", "1/1/1990", "***-**-1234", "yes", 'N/A', 'N/A')
@@ -17,9 +17,9 @@ print("policyholders: {}".format(policyholder.policyholders))
 
 print("events: {}".format(event.events))
 
-event1 = event.from_parent(ph1.policyholder_id, '5/5/2009', 'WC', 1000, 500)
-event2 = event.from_parent(ph1.policyholder_id, '4/5/2010', 'Crime', 2000, 500)
-event3 = event.from_parent(ph2.policyholder_id, '1/5/2010', 'GL', 1000, 500)
+event1 = event.by_id(ph1.policyholder_id, '5/5/2009', 'WC', 1000, 500)
+event2 = event.by_id(ph1.policyholder_id, '4/5/2010', 'Crime', 2000, 500)
+event3 = event.by_id(ph2.policyholder_id, '1/5/2010', 'GL', 1000, 500)
 
 print("events: {}".format(event.events))
 
@@ -31,11 +31,11 @@ print("ph4 policy holder ID: {}".format(ph4_id))
 
 # 2. Example of "adds an insurance event for a specific user identified by unique identifier"
 # a. if the unique identifier matches the policyholder in policyholders list, then it will be added to events list
-event4 = event.from_parent(ph4_id, '1/5/2010', 'WC', 1000, 500)
+event4 = event.by_id(ph4_id, '1/5/2010', 'WC', 1000, 500)
 print("events: {}".format(event.events))
 
 # b. if the unique identifier doesn't match to elements in policyholders list, then it will not be added to events list
-event5 = event.from_parent(1, '1/5/2010', 'WC', 1000, 500)
+event5 = event.by_id(1, '1/5/2010', 'WC', 1000, 500)
 
 # 3. List all insured individuals
 print("policyholders: {}".format(policyholder.display_policyholders()))
