@@ -1,10 +1,9 @@
 # gd_test
 
 Since I don't have access to database,
-here I assume policyholders are stored in a list called policyholders
-events are stored in a list called events
-each element of these two lists is a class object
-event is a child of policyholder
+here I assume policyholders are stored in a list called policyholders,
+events are stored in a list called events,
+each element of these two lists is a class object.
 
 [policyholders.py](https://github.com/swjcpy/gd_test/blob/master/policyholders.py) defines each policyholder,
 everytime a new policy holder is created, it will be stored into policyholders list
@@ -17,7 +16,7 @@ same as [events.py](https://github.com/swjcpy/gd_test/blob/master/events.py)
 
  ## Design a data structure
 
- The answer can be found at [gd_test](https://github.com/swjcpy/gd_test/blob/master/gd_test.py)
+ The answer can be found at [gd_test.py](https://github.com/swjcpy/gd_test/blob/master/gd_test.py)
 
  ```python
 # Data structure that contains aggregated metrics for all insured people
