@@ -1,5 +1,15 @@
 # gd_test
- software test
+
+Since I don't have access to database,
+here I assume policyholders are stored in a list called policyholders
+events are stored in a list called events
+each element of these two lists is a class object
+event is a child of policyholder
+
+[policyholders.py](https://github.com/swjcpy/gd_test/blob/master/policyholders.py) defines each policyholder,
+everytime a new policy holder is created, it will be stored into policyholders list
+
+same as [events.py](https://github.com/swjcpy/gd_test/blob/master/events.py)
 
  ## Design a schema for policyholders
 
